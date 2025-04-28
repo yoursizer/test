@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>External Demo - YourSizer Widget</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .product-image {
+      background-color: #f5f5f5;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .product-details {
+      padding: 20px;
+    }
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+    .add-to-cart {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .product-description {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>External Demo - YourSizer Widget</h1>
+  <p>This is a simple HTML page to demonstrate the YourSizer widget integration on an external website.</p>
+  
+  <div class="product-container">
+    <div class="product-image">
+      Product Image
+    </div>
+    <div class="product-details">
+      <h2 class="product-title">Premium T-Shirt</h2>
+      <div class="product-price">$49.99</div>
+      
+      <!-- The widget button will be inserted here based on configuration -->
+      
+      <button class="add-to-cart">Add to Cart</button>
+      
+      <div class="product-description">
+        <h3>Product Description</h3>
+        <p>This is a high-quality t-shirt made from 100% organic cotton. It's comfortable, durable, and perfect for everyday wear.</p>
+        <p>The YourSizer widget will help customers find their perfect size for this product.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- YourSizer Widget -->
+  <script>
+    (function(d,t) {
+      var s = d.createElement(t);
+      s.src = "https://app.yoursizer.com/api/widget?theme=light&primaryColor=%233b82f6&accentColor=%23f97316&textColor=%23111827&buttonText=Find%20Your%20Size&buttonStyle=default&buttonPosition=below-price";
+      s.async = true;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })(document, "script");
+  </script>
+  <!-- End YourSizer Widget -->
+</body>
+</html> 
